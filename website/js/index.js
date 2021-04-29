@@ -6,6 +6,7 @@ async function showCamera() {
         if (res.ok){
             let cameras = await res.json();
             ItemGenerator._generateAllItems(cameras)
+            console.table(cameras)
         }else {
             console.error('Error !')
         }

@@ -83,7 +83,7 @@ main {
   main section {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
     margin: 0 auto; }
     main section article {
@@ -100,8 +100,7 @@ main {
       main section article img {
         height: 140px;
         height: 230px;
-        background-size: cover;
-        image-rendering: crisp-edges; }
+        object-fit: cover; }
       main section article:hover {
         transform: scale(1.02);
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);

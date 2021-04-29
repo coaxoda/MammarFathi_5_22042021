@@ -107,7 +107,7 @@ main{
     section{
         display: flex;
         justify-content:center;
-        width: 80%;
+        width: 100%;
         flex-wrap: wrap;
         margin: 0 auto;
         article{
@@ -124,8 +124,7 @@ main{
                 img{
                     height: 140px;
                     height: 230px;
-                    background-size: cover;
-                    image-rendering: crisp-edges;
+                    object-fit: cover;
                 }
                 
                 &:hover{
