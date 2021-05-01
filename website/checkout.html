@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0082f976c1.js" crossorigin="anonymous"></script>
     <title>Orinoco - Appareil photo Vintage</title>
 </head>
 <body>
@@ -22,14 +23,51 @@
     </header>
 
     <main>
-       <section>
+        <h1>Mon panier</h1>
+        <h3>Liste de vos article ajouter au panier</h3>
+       <section><!--
            <div id="checkoutlist">
-               <fieldset>
-                   Liste de vos article
-               </fieldset>
+               <div class="checkout">
+                   <img src="img/cam/vcam_1.jpg" alt="Description image">
+                   <p>Nom du produit<a href="#">(Voir)</a></p>
+                   <p>Description du produit</p>
+                   <p>Prix</p>
+                   <i class="fas fa-times"></i>
+               </div>
            </div>
-       </section>
+            <div id="totalprice">
+                <h3>Prix total</h3>
+                <p>799€</p>
+            </div>-->
+        </section>
+        <h1 id="placeorder">Veuillez renseigner vos coordornée pour la livraison de votre commande</h1>
+        <div class="form">
+            <form class="formsection">
+                <div class="formitems1">
+                    <label for="firstName">Nom*
+                        <input id="firstName" type="text" placeholder="Nom requis" aria-invalid="false" required>
+                    </label>
+                    <p>  </p>
+                    <label for="lastName">Prénom*
+                        <input id="lastName" type="text" placeholder="Prénom requis" aria-invalid="false" required>
+                    </label>
+                </div>
+                <div class="formitems2">
+                    <label for="adress">Adresse postale*
+                        <input id="adress" type="text" aria-invalid="false" required>
+                    </label>
+                    <label for="city">Code postale*
+                        <input id="city" type="text" pattern="[-+]?[0-9]+(\.[0-9]+)?" title="Renseigner un code postale valide 'ex: 75001'" aria-invalid="false" required>
+                    </label>
+                    <label for="email">Adresse Email
+                        <input id="email" type="text" aria-invalid="false" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" title="Renseigner une adresse e-mail valide 'exemple@live.com'">
+                    </label>
+                </div>
+                <button type="submit">Commander</button>
+            </form>				 
+        </div>
     </main>
+
     <footer>
         <ul>
             <li>Orinoco</li>
@@ -37,8 +75,9 @@
             <li>CGU</li>
         </ul>
     </footer>
-    <script src="../app.js"></script>
-    <script src="../server.js"></script>
-    <script src="/backend/check.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/classes/checkoutGenerator.js"></script>
+    <script src="js/classes/checkoutItem.js"></script>
+    
 </body>
 </html>

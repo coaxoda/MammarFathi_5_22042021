@@ -5,9 +5,9 @@ body {
   font-family: Raleway, helvetica, arial, sans-serif;
   background-color: #424242;
   background-image: linear-gradient(to top, black, rgba(177, 134, 247, 0.3)), url("../img/illustration.jpg");
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; }
+  background-position: center; }
 
 header {
   height: 120px;
@@ -66,8 +66,141 @@ img {
   height: 100px;
   background-size: cover; }
 
+main {
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 1rem; }
+  main h1, main h3, main p {
+    margin: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center; }
+  main section {
+    background-color: #ffffff15;
+    margin: 2rem auto;
+    width: 40%;
+    padding: 2rem; }
+    main section #totalprice {
+      display: flex;
+      justify-content: flex-end; }
+
+#placeorder {
+  text-decoration: 5px rgba(128, 128, 128, 0.329) solid underline;
+  font-size: 22px; }
+
+.form {
+  display: flex;
+  margin: 0 auto; }
+  .form .formsection {
+    margin: 0 auto;
+    width: 50%;
+    padding: 1rem; }
+  .form .formitems1 {
+    display: flex;
+    align-items: center;
+    width: 102.5%; }
+    .form .formitems1 label {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+    .form .formitems1 input {
+      padding: 1rem;
+      width: 95%;
+      margin: 0.5rem auto;
+      border: none;
+      background-color: gray; }
+    .form .formitems1 ::placeholder {
+      color: white; }
+  .form .formitems2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .form .formitems2 label {
+      display: flex;
+      flex-direction: column;
+      width: 100%; }
+    .form .formitems2 input {
+      padding: 1rem;
+      width: 100%;
+      margin: 0.5rem auto;
+      border: none;
+      background-color: gray; }
+    .form .formitems2:focus {
+      color: white; }
+  .form button {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    background: #e29746;
+    background: linear-gradient(90deg, #e29746 0%, #b186f7 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    margin: 3rem auto;
+    border-radius: 4rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none; }
+    .form button:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0px 20px rgba(244, 164, 255, 0.274); }
+    .form button:active {
+      transform: scaleZ(0.95);
+      box-shadow: 0px 0px 20px rgba(255, 136, 0, 0.219); }
+
 #checkoutlist {
+  height: 100%;
+  margin: 1rem auto;
+  width: 100%; }
+  #checkoutlist .checkout {
+    display: flex;
+    height: 110px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: #ffffff3d;
+    width: 100%; }
+    #checkoutlist .checkout :nth-child(2) {
+      margin: auto;
+      line-height: 110px; }
+    #checkoutlist .checkout :nth-child(3) {
+      margin: auto;
+      line-height: 110px;
+      width: 30%; }
+    #checkoutlist .checkout :nth-child(4) {
+      margin: auto;
+      line-height: 110px; }
+    #checkoutlist .checkout img {
+      height: 110px;
+      object-fit: cover; }
+    #checkoutlist .checkout i {
+      display: block;
+      font-size: x-large;
+      cursor: pointer;
+      line-height: 110px;
+      color: #3f3f3f;
+      padding: 0rem 2rem;
+      transition: all 0.3s ease; }
+      #checkoutlist .checkout i:hover {
+        color: #ff5a4e;
+        background-color: rgba(255, 255, 255, 0.13); }
+
+main {
+  color: white; }
+
+footer {
   width: 100%;
-  height: 100%; }
+  height: 140px;
+  background-color: #272727; }
+  footer ul li {
+    list-style: none;
+    text-decoration: none;
+    color: white; }
 
 /*# sourceMappingURL=checkout.css.map */

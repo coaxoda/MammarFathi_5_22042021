@@ -66,18 +66,27 @@ header{
     }
 }
 // CHECKOUT BUBBLE NOTIFICATION //
-#check{
-    height: 30px;
-    width: 30px;
-    background-color: #f85d5d;
-    position: absolute;
-    border-radius: 2rem;
-    top: -5px;
-    left: -10px;
-    justify-content: center;
-    display: flex;
-    line-height: 30px;
-    display: none;    
+// #check{
+//     height: 30px;
+//     width: 30px;
+//     background-color: #f85d5d;
+//     position: absolute;
+//     border-radius: 2rem;
+//     top: -5px;
+//     left: -10px;
+//     justify-content: center;
+//     display: flex;
+//     line-height: 30px;
+//     display: none;    
+// }
+
+#succes{
+    position: relative;
+    display: none;
+    justify-content:center;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
 }
 
 // LOGO ORINOCO SETTINGS //
@@ -170,6 +179,7 @@ main{
 // FOOTER SECTION SETTINGS //
 footer{
         width: 100%;
+        height: 140px;
         background-color: #272727;
     ul li{
         list-style: none;
