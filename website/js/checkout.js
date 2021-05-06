@@ -3,8 +3,9 @@ async function showCamera() {
         let res = await fetch("http://localhost:3000/api/cameras")
         if (res.ok){
             let cameras = await res.json();
+            let myCart = JSON.parse(localStorage.getItem("myCart"))
             CheckoutGenerator._generateCheckoutItems(cameras)
-            console.table(cameras)
+            console.table(myCart)
         }else {
             console.error('Error !')
         }
