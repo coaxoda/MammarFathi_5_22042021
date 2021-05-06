@@ -1,4 +1,3 @@
-
 class CheckoutGenerator {
 
     static _generateCheckoutItems(cameras) {
@@ -6,9 +5,6 @@ class CheckoutGenerator {
         let mainSection = document.querySelector('section')
         mainSection.appendChild(checkoutContainer)
         checkoutContainer.id = 'checkoutlist'
-        
-        
-
-        new Checkout(cameras, checkoutContainer)
+        new Checkout(articleBtn, cameras, checkoutContainer)
     }
 }

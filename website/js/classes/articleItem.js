@@ -7,7 +7,7 @@ class article {
         this._articleDescription(articleBody, camProduct)
         this._articleTitle(articleBody, camProduct)
         this._articlePrice(camProduct, articleBody)
-        this._articleBtn(camProduct, articleSection)
+        this._articleBtn(articleSection, camProduct)
         this.camProduct = camProduct
         this.cameras = cameras
         this._articleLens(articleBody, camProduct)
@@ -59,13 +59,12 @@ class article {
         articleLensSect.classList.add('lense');
         articleLensSect.innerText = "Objectif :";
         articleBody.appendChild(articleLensSect);
-        console.log(articleLensSect)
-
+        //Creating of a select element with different lens Value
         let selectLens = document.createElement("select");
         let lense = camProduct.lenses;
         articleBody.appendChild(selectLens);
-        console.log(lense)
-        
+        // console.log(lense)
+        //Display all lense available for each camProduct item
         for (let i = 0; i < lense.length; i++) {
             let lensesOption = document.createElement("option");
             lensesOption.textContent = camProduct.lenses[i];
@@ -73,19 +72,32 @@ class article {
         }
     }
     //Add article into chekout
-    _articleBtn(camProduct, articleSection){
+    _articleBtn(articleSection, camProduct){
         const articleBtn = document.createElement('button')
-        const checker = document.getElementById('check')
         articleBtn.className = "add"
         articleBtn.type = "submit"
         articleBtn.innerHTML = "Ajouter au panier"
-        // At click, store the value (_id) of cameras to be picked in checkout page
-        articleBtn.addEventListener('click', function(){
-            checker.style.display = "flex"
-            localStorage.setItem("product", camProduct._id)
-        })
         articleSection.appendChild(articleBtn)
-    }
+        articleBtn.addEventListener('click', function(){
+            let myCheck = localStorage.getItem("myCheck")
+            console.log(myCheck);
+            if(myCheck === null){
+                myCheck = [camProduct.name +" - "+ camProduct.price +" - "+ camProduct.imageUrl]
+                console.log("Product [" + myCheck + "] ready for checkout !");
+                let myCart = []
+                myCart.push(myCheck)
+                localStorage.setItem("CART", myCart)
+            } else {
+                console.log("VALUE need to be 'null' to PASS !")
+            }
+            //Display in cart notification
+            let test = JSON.stringify(localStorage.getItem("CART"))
+            console.log(test);
+            let notification = document.getElementById('succes')
+            notification.style.display ="flex"
+        })
+    } 
 }
+
 
 
