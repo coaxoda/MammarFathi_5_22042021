@@ -100,7 +100,6 @@ class article {
         articleBtn.addEventListener('click', function(){
             //Creation of an empty array, ready for receive item to checkout
             let myCart = JSON.parse(localStorage.getItem("myCart"))
-            console.log(myCart); 
                 if(myCart === null){
                     myCart = []
                 }
@@ -109,13 +108,13 @@ class article {
                 price : camProduct.price,
                 img : camProduct.imageUrl
             }
-            // item pushed into an "myCart" array
+            // item pushed into "myCart" array
             myCart.push(myArticle) 
             localStorage.setItem("myCart", JSON.stringify(myCart))
-            console.log(myCart)
+            console.log(myCart);
             
             let notification = document.getElementById('succes')
             notification.style.display ="flex"
         })
-    } 
+    }
 }

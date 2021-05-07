@@ -4,10 +4,10 @@ async function showCamera() {
         if (res.ok){
             let cameras = await res.json();
             let myCart = JSON.parse(localStorage.getItem("myCart"))
-            CheckoutGenerator._generateCheckoutItems(cameras)
             console.table(myCart)
+            CheckoutGenerator._generateCheckoutItems(cameras, myCart)
         }else {
-            console.error('Error !')
+            alert('Connexion impossible avec l\'API')
         }
         }catch (error) {
         console.log(error);
