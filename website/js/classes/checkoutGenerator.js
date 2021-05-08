@@ -10,6 +10,9 @@ class CheckoutGenerator {
             empty.innerHTML = "Votre panier est vide"
             empty.style.fontSize = "22px"
             checkoutContainer.appendChild(empty)
+            document.querySelector('#remove').style.display = 'none'
+            document.querySelector('button').style.display = 'none'
+            document.querySelector('#placeorder').innerHTML = " "
         }
         for (let i = 0; i < myCart.length || myCart.price; i++) {
             new myCheckout(cameras, checkoutContainer, myCart[i])
@@ -19,41 +22,57 @@ class CheckoutGenerator {
 class myCheckout{
 
     constructor(cameras, checkoutContainer, myCart){
-        this._checkoutContent(checkoutContainer, myCart)
+        let checkout = this._checkoutContent(checkoutContainer)
+        this._checkoutImg(myCart, checkout)
+        this._checkoutName(checkout, myCart)
+        this._checkoutPrice(checkout, myCart)
+        this._checkoutRemove(checkoutContainer)
+        this._checkoutTotalPrice(checkoutContainer)
     }
 
-    _checkoutContent(checkoutContainer, myCart){
+    _checkoutContent(checkoutContainer){
         //Making div body of each article in cart
         let checkout = document.createElement('div')
         checkout.className = 'checkout'
         checkoutContainer.appendChild(checkout)
+        return checkout
+    }
+    _checkoutImg(myCart, checkout){
         //Img for each article img 
         let checkoutImg = document.createElement('img')
         checkoutImg.src = myCart.img
         checkout.appendChild(checkoutImg)
+    }    
+    _checkoutName(checkout, myCart){
         //Display each product name
         let checkoutName = document.createElement('p')
         checkoutName.innerHTML = myCart.name
         checkout.appendChild(checkoutName)
+    }    
+    _checkoutPrice(checkout, myCart) {
         //Display each product price
         let checkoutPrice = document.createElement('p')
-        checkoutPrice.innerHTML = myCart.price  / 200 - 0.5 + "€"
+        checkoutPrice.innerHTML = myCart.price  / 100 + "€"
         checkout.appendChild(checkoutPrice)
+    }   
+    _checkoutRemove(checkoutContainer){
         //Deleting button for each product
-        let checkoutDeleteItem = document.createElement('i')
-        checkoutDeleteItem.className = 'fas fa-times'
-        checkout.appendChild(checkoutDeleteItem)
-        checkoutDeleteItem.addEventListener('click', function(){
-            checkout.style.display = 'none'
-            localStorage.removeItem("myCart")
+        let removeCart = document.querySelector('#remove')
+        checkoutContainer.appendChild(removeCart)
+        removeCart.addEventListener('click', function(){
+            localStorage.removeItem('myCart')
+            checkoutContainer.style.display = 'none'
+            window.location.reload()
         })
+    }
+    _checkoutTotalPrice(checkoutContainer){
         //Total price Display
-        let panier = JSON.parse(localStorage.getItem('myCart'))
-        let price = panier.map((item) => item.price).reduce((a, b) => a + b)
-        
-        let checkoutSection = document.querySelector('section')
-        let checkoutTotalPriceBody = document.createElement('div')
-        console.log(`Le prix total est de ${price / 200 - 0.5} €`)
+        let cartParsing = JSON.parse(localStorage.getItem('myCart')) //Parsing LS myCart to object
+        let price = cartParsing.map((item) => item.price).reduce((a, b) => a + b) // Picking all index with value 'price' to addition all price value
+        let totalPrice = (price / 100); // Show the final price
+        // console.log(totalPrice);
+        let total = document.querySelector('#total')
+        total.innerHTML = "Prix total : " + `${totalPrice}`
+        checkoutContainer.appendChild(total)
     }
 }
-

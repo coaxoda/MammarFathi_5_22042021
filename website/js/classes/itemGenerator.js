@@ -51,7 +51,7 @@ class Item {
 
     _generatePrice(camera, productDivBody) {
         let productPrice = document.createElement('p') // target the price of each card
-        productPrice.innerHTML = camera.price / 200 - 0.5 + "€";
+        productPrice.innerHTML = camera.price / 100 + "€";
         productDivBody.appendChild(productPrice)
     }
 

@@ -69,7 +69,7 @@ class article {
     //Article price
     _articlePrice(camProduct, articleBody){
         const articlePrice = document.createElement('p')
-        articlePrice.innerHTML = camProduct.price / 200 - 0.5 + "€"
+        articlePrice.innerHTML = camProduct.price / 100 + "€"
         articleBody.appendChild(articlePrice)
     } 
     //Article Lenses options

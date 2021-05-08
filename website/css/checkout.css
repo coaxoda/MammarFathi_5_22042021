@@ -1,8 +1,18 @@
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    top: -30px; }
+  50% {
+    opacity: 1;
+    top: 30px; }
+  100% {
+    opacity: 0;
+    top: -30px; } }
 body {
   margin: 0;
   padding: 0;
   margin: 0px auto;
-  font-family: Raleway, helvetica, arial, sans-serif;
+  font-family: helvetica, arial, sans-serif;
   background-color: #424242;
   background-image: linear-gradient(to top, black, rgba(177, 134, 247, 0.3)), url("../img/illustration.jpg");
   background-repeat: no-repeat;
@@ -82,6 +92,25 @@ main {
     main section #totalprice {
       display: flex;
       justify-content: flex-end; }
+    main section #remove {
+      border-radius: 1rem;
+      font-weight: 600;
+      border: none;
+      align-items: center;
+      height: 30px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.521);
+      margin: 1rem auto;
+      transition: all 0.3s ease-in-out; }
+      main section #remove:hover {
+        border-radius: 1rem;
+        font-weight: 600;
+        border: none;
+        align-items: center;
+        height: 30px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.158);
+        margin: 1rem auto; }
 
 #placeorder {
   text-decoration: 5px rgba(128, 128, 128, 0.329) solid underline;
@@ -161,10 +190,11 @@ main {
   #checkoutlist .checkout {
     display: flex;
     height: 110px;
+    width: 180px;
     justify-content: space-between;
     flex-direction: row;
-    margin: 0 auto;
-    background-color: #ffffff3d;
+    margin: 0.5rem auto;
+    background-color: #0000004b;
     width: 100%; }
     #checkoutlist .checkout :nth-child(2) {
       margin: auto;
