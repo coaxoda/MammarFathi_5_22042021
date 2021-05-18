@@ -106,7 +106,8 @@ class article {
             let myArticle = {
                 name : camProduct.name,
                 price : camProduct.price,
-                img : camProduct.imageUrl
+                img : camProduct.imageUrl,
+                id: camProduct._id
             }
             // item pushed into "myCart" array
             myCart.push(myArticle) 

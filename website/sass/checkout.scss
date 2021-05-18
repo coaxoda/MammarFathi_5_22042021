@@ -1,5 +1,6 @@
 @import "__variable.scss";
 @import "__keyframes.scss";
+@import "__media.scss";
 
 body{
     margin: 0;
@@ -98,7 +99,7 @@ main{
     section{
         background-color: #ffffff15;
         margin: 2rem auto;
-        width: 40%;
+        width: 60%;
         padding: 2rem;
         #totalprice{
             display: flex;
@@ -182,7 +183,7 @@ main{
             color: white;
         }
     }
-    button{
+    #submit{
         list-style: none;
         display: flex;
         justify-content: center;
@@ -218,6 +219,10 @@ main{
     height: 100%;
     margin: 1rem auto;
     width: 100%;
+    #total{
+        justify-content: flex-end !important;
+            font-weight: 700 !important;
+    }
     .checkout{
         display: flex;
         height: 110px;
@@ -230,11 +235,14 @@ main{
         :nth-child(2){
             margin:auto;
             line-height: 110px;
+            white-space: nowrap;
+            width: 25%;
+            justify-content: flex-start;
+            text-transform: uppercase;
         }
         :nth-child(3){
             margin:auto;
             line-height: 110px;
-            width: 30%;
         }
         :nth-child(4){
             margin:auto;
@@ -242,6 +250,7 @@ main{
         }
         img{
             height: 110px;
+            width: 165px;
             object-fit: cover;
         }
         i{

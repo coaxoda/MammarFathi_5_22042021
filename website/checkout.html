@@ -12,12 +12,15 @@
 </head>
 <body>
     <header>
-       
         <nav>
-            <a href="index.html"><img src="img/logo/logo_orinoco.png" alt="Logo de la societé Orinoco"></a>
-            <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Mon panier <div id="check">1</div></a></li>
+            <a href="index.html" id="home"><img src="img/logo/logo_orinoco.png" alt="Logo de la societé Orinoco"></a>
+            <ul id="initial-nav">
+                <li><a href="mailto:orinoco@contact.com">Contact</a></li>
+                <li><a href="checkout.html">Mon panier <div id="check">1</div></a></li>
+            </ul>
+            <ul id="responsive-nav">
+                <li><a href="mailto:orinoco@contact.com"><i class="far fa-envelope"></i></a></li>
+                <li><a href="checkout.html"><i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -43,31 +46,31 @@
             <p id="remove">Vider le panier</p>
         </section>
         
-        <h1 id="placeorder">Veuillez renseigner vos coordornée pour la livraison de votre commande</h1>
+        <h1 id="placeorder">Veuillez renseigner vos coordornées pour la livraison de votre commande</h1>
         <div class="form">
             <form class="formsection">
                 <div class="formitems1">
                     <label for="firstName">Nom*
-                        <input id="firstName" type="text" placeholder="Nom requis" aria-invalid="false" required>
+                        <input id="firstName" type="text" placeholder="Nom requis" required>
                     </label>
                     <p>  </p>
                     <label for="lastName">Prénom*
-                        <input id="lastName" type="text" placeholder="Prénom requis" aria-invalid="false" required>
+                        <input id="lastName" type="text" placeholder="Prénom requis" required>
                     </label>
                 </div>
                 <div class="formitems2">
                     <label for="adress">Adresse postale*
-                        <input id="adress" type="text" aria-invalid="false" required>
+                        <input id="address" type="text" required>
                     </label>
-                    <label for="city">Code postale*
-                        <input id="city" type="text" pattern="[-+]?[0-9]+(\.[0-9]+)?" title="Renseigner un code postale valide 'ex: 75001'" aria-invalid="false" required>
+                    <label for="city">Ville*
+                        <input id="city" type="text" pattern="[a-zA-Z]" title="Renseigner un nom de ville valide (ex: Moulins, Lyon...)" required>
                     </label>
-                    <label for="email">Adresse Email
-                        <input id="email" type="text" aria-invalid="false" pattern="[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})" title="Renseigner une adresse e-mail valide 'exemple@live.com'">
+                    <label for="email">Adresse Email*
+                        <input id="email" type="text" pattern ="[^ @]*@[^ @]*" title="Renseigner une adresse e-mail valide 'exemple@live.com'" required>
                     </label>
                 </div>
-                <button type="submit">Commander</button>
-            </form>				 
+                <button id="submit">Commander</button>	
+            </form> 		 
         </div>
     </main>
 

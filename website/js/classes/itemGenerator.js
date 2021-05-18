@@ -56,7 +56,6 @@ class Item {
     }
 
     _generateButton(productArticle, camera) {
-        console.log("camera:", camera)
         const productBtn = document.createElement('a');
         productBtn.id = "show";
         productBtn.href = "article.html?id=" + camera._id

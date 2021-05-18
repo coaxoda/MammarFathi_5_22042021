@@ -42,8 +42,19 @@
       margin: 0.5rem auto !important;
       color: white;
       width: 80% !important; }
+    main section #checkoutlist .checkout :nth-child(2) {
+      overflow: hidden;
+      font-size: 12px; }
+    main section #checkoutlist .checkout :nth-child(3) {
+      background-color: #00000057;
+      width: 20%;
+      margin: 0 auto;
+      margin-right: 0;
+      line-height: 110px; }
   main #productID {
     width: 70% !important; }
+  main img {
+    width: 110px !important; }
 
   #succes {
     width: 90% !important; } }
@@ -71,12 +82,26 @@
       header nav #responsive-nav li i {
         font-size: 25px; }
 
-  main .presentation {
-    margin: 2rem auto;
-    width: 90% !important; }
-    main .presentation h1, main .presentation p {
-      text-justify: distribute;
-      margin: 0.5rem auto !important; } }
+  main {
+    padding: 0 !important;
+    padding-top: 1rem !important; }
+    main .presentation {
+      margin: 2rem auto;
+      width: 90% !important; }
+      main .presentation h1, main .presentation p {
+        text-justify: distribute;
+        margin: 0.5rem auto !important; }
+    main section {
+      width: 90% !important; }
+      main section #checkoutlist .checkout :nth-child(2) {
+        overflow: hidden;
+        font-size: 12px; }
+      main section #checkoutlist .checkout :nth-child(3) {
+        background-color: #00000057;
+        width: 20%;
+        margin: 0 auto;
+        margin-right: 0;
+        line-height: 110px; } }
 @media screen and (min-width: 768px) {
   #initial-nav {
     display: flex; }
@@ -89,12 +114,25 @@
     width: 90% !important; }
     #presentation h1, #presentation p {
       text-justify: distribute;
-      margin: 0.5rem auto !important; } }
+      margin: 0.5rem auto !important; }
+
+  section {
+    max-width: 60% !important; }
+    section #checkoutlist .checkout :nth-child(2) {
+      overflow: hidden;
+      font-size: 18px; }
+    section #checkoutlist .checkout :nth-child(3) {
+      background-color: #00000057;
+      width: 20%;
+      margin: 0 auto;
+      margin-right: 0;
+      line-height: 110px;
+      font-size: 18px; } }
 body {
   margin: 0;
   padding: 0;
   margin: 0px auto;
-  font-family: Raleway, helvetica, arial, sans-serif;
+  font-family: helvetica, arial, sans-serif;
   background-color: #424242;
   background-image: linear-gradient(to top, black, rgba(177, 134, 247, 0.3)), url("../img/illustration.jpg");
   background-repeat: no-repeat;
@@ -141,123 +179,56 @@ header {
           transform: scaleZ(0.95);
           box-shadow: 0px 0px 20px rgba(255, 136, 0, 0.219); }
 
-#check {
-  height: 30px;
-  width: 30px;
-  background-color: #f85d5d;
-  position: absolute;
-  border-radius: 2rem;
-  top: -5px;
-  left: -10px;
-  justify-content: center;
-  display: flex;
-  line-height: 30px;
-  display: none; }
-
 img {
   height: 100px;
   background-size: cover; }
 
-main {
-  max-width: 1440px;
-  margin: 0 auto; }
-  main .presentation {
+main #confirm-order {
+  height: 900px;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.384); }
+  main #confirm-order h1 {
+    text-transform: uppercase; }
+  main #confirm-order h1, main #confirm-order p {
+    width: 60%;
+    margin: 1rem auto; }
+  main #confirm-order #back-index {
+    width: 160px;
+    margin: 0.5rem auto;
+    list-style: none;
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    padding: 1rem 0rem;
-    width: 100%; }
-    main .presentation h1, main .presentation p {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      color: white; }
-  main section {
-    display: flex;
+    border: none;
     justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 0 auto; }
-    main section article {
-      display: flex;
-      flex-direction: column;
-      height: 360px;
-      margin: 1rem;
-      width: 340px;
-      background-size: cover;
-      background-color: rgba(255, 255, 255, 0.849);
-      box-shadow: 0px 0px 10px #00000021;
-      transition: all 0.3s ease-in-out;
-      position: relative; }
-      main section article img {
-        height: 140px;
-        height: 230px;
-        object-fit: cover; }
-      main section article:hover {
-        transform: scale(1.02);
-        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.212);
-        z-index: 1; }
-      main section article:active {
-        transform: scaleZ(1.05);
-        z-index: 2; }
-      main section article a {
-        border: none;
-        height: 40px;
-        width: 180px;
-        line-height: 40px;
-        text-align: center;
-        position: absolute;
-        bottom: 10px;
-        cursor: pointer;
-        left: 80px;
-        color: white;
-        border-radius: 2rem;
-        font-weight: 600;
-        background: #e29746;
-        background: linear-gradient(90deg, #e29746 0%, #b186f7 100%); }
-
-a {
-  text-decoration: none;
-  list-style: none;
-  color: white; }
-
-#items {
-  margin-bottom: 3rem; }
-
-.product {
-  width: 100%; }
-  .product h3 {
-    text-align: center;
-    color: black;
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding: 0.5rem;
-    border-radius: 0rem 0rem 1rem 1rem; }
-  .product p {
-    text-align: center;
-    color: black;
-    margin: 0; }
-    .product p span {
-      text-decoration: line-through;
-      font-weight: 500; }
+    font-weight: bold;
+    color: white;
+    background: #e29746;
+    background: linear-gradient(90deg, #e29746 0%, #b186f7 100%);
+    box-shadow: 0px 0px 10px rgba(49, 49, 49, 0.404);
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; }
+    main #confirm-order #back-index:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 0px 20px rgba(244, 164, 255, 0.274); }
+    main #confirm-order #back-index:active {
+      transform: scaleZ(0.95);
+      box-shadow: 0px 0px 20px rgba(255, 136, 0, 0.219); }
 
 footer {
-  height: 140px;
   width: 100%;
+  height: 140px;
   background-color: #272727; }
   footer ul li {
     list-style: none;
     text-decoration: none;
     color: white; }
 
-.promo {
-  top: 10px;
-  position: absolute;
-  right: 10px;
-  padding: 1rem;
-  background: #ff671fc7;
-  font-weight: 800;
-  border-radius: 2rem;
-  color: white; }
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=confirm.css.map */
