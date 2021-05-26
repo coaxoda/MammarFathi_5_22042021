@@ -1,4 +1,4 @@
-async function showCamera() {
+async function getCheckout() {
     try{
         let res = await fetch("http://localhost:3000/api/cameras")
         if (res.ok){
@@ -14,4 +14,4 @@ async function showCamera() {
     }
 }
 
-showCamera()
+getCheckout()

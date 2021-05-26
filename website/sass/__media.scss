@@ -72,9 +72,6 @@
         #productID{
              width:70% !important;
         }
-        img{
-            width:110px !important;
-        }
     }
     #succes{
         width: 90% !important;
@@ -131,6 +128,7 @@
         }
         section{
             width: 90% !important;
+            margin: 0 auto;
             #checkoutlist .checkout :nth-child(2){
                 overflow: hidden;
                 font-size: 12px;
@@ -163,6 +161,7 @@
     }
     section{
         max-width: 60% !important;
+        margin: 0 auto;
         #checkoutlist .checkout :nth-child(2){
             overflow: hidden;
             font-size: 18px;

@@ -42,6 +42,15 @@
       margin: 0.5rem auto !important;
       color: white;
       width: 80% !important; }
+    main section #checkoutlist .checkout :nth-child(2) {
+      overflow: hidden;
+      font-size: 12px; }
+    main section #checkoutlist .checkout :nth-child(3) {
+      background-color: #00000057;
+      width: 20%;
+      margin: 0 auto;
+      margin-right: 0;
+      line-height: 110px; }
   main #productID {
     width: 70% !important; }
 
@@ -71,12 +80,26 @@
       header nav #responsive-nav li i {
         font-size: 25px; }
 
-  main .presentation {
-    margin: 2rem auto;
-    width: 90% !important; }
-    main .presentation h1, main .presentation p {
-      text-justify: distribute;
-      margin: 0.5rem auto !important; } }
+  main {
+    padding: 0 !important;
+    padding-top: 1rem !important; }
+    main .presentation {
+      margin: 2rem auto;
+      width: 90% !important; }
+      main .presentation h1, main .presentation p {
+        text-justify: distribute;
+        margin: 0.5rem auto !important; }
+    main section {
+      width: 90% !important; }
+      main section #checkoutlist .checkout :nth-child(2) {
+        overflow: hidden;
+        font-size: 12px; }
+      main section #checkoutlist .checkout :nth-child(3) {
+        background-color: #00000057;
+        width: 20%;
+        margin: 0 auto;
+        margin-right: 0;
+        line-height: 110px; } }
 @media screen and (min-width: 768px) {
   #initial-nav {
     display: flex; }
@@ -89,7 +112,20 @@
     width: 90% !important; }
     #presentation h1, #presentation p {
       text-justify: distribute;
-      margin: 0.5rem auto !important; } }
+      margin: 0.5rem auto !important; }
+
+  section {
+    max-width: 60% !important; }
+    section #checkoutlist .checkout :nth-child(2) {
+      overflow: hidden;
+      font-size: 18px; }
+    section #checkoutlist .checkout :nth-child(3) {
+      background-color: #00000057;
+      width: 20%;
+      margin: 0 auto;
+      margin-right: 0;
+      line-height: 110px;
+      font-size: 18px; } }
 body {
   margin: 0;
   padding: 0;

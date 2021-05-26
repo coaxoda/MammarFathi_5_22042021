@@ -4,9 +4,9 @@ async function showCamera() {
     try{
         let res = await fetch("http://localhost:3000/api/cameras")
         if (res.ok){
-            let cameras = await res.json();
-            ItemGenerator._generateAllItems(cameras)
-            console.table(cameras)
+            let camera = await res.json();
+            ItemGenerator._generateAllItems(camera)
+            console.table(camera)
         }else {
             console.error('Error !')
         }
