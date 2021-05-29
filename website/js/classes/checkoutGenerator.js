@@ -109,14 +109,13 @@ class myCheckout{
             }
             
             if(firstName.value && lastName.value && address.value && city.value && email.value != ""){ 
-                console.log("Incorrect value into input !");
                 products.push(myCart.id)
                 contact = userInfo
                 let order = JSON.stringify({contact, products})
                 localStorage.setItem("OrderID", order)
                 window.location.href = "confirm.html"
             }else {
-                console.error(userInfo)
+                console.log("Incorrect value into input !");            
             }
         })
     }

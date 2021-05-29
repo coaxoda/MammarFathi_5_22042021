@@ -69,7 +69,7 @@ header{
 
 #succes-container{
     width:100%;
-    height:80%;
+    height:70%;
     position:absolute;
 }
 
@@ -182,13 +182,19 @@ main{
 
 // FOOTER SECTION SETTINGS //
 footer{
-        width: 100%;
-        height: 140px;
-        background-color: #272727;
-    ul li{
+    height: 140px;
+    width:100%;
+    background-color: rgb(39, 39, 39);
+    ul{
+        display:flex;
+        justify-content:space-around;
+        line-height:140px;
+        padding: 0;
+        li{
         list-style: none;
         text-decoration: none;
         color: white;
         
-    }
+        }
+    } 
 }

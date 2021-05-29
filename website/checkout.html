@@ -28,20 +28,7 @@
     <main>
         <h1>Mon panier</h1>
         <h3>Liste de vos article ajouter au panier</h3>
-       <section><!--
-            <div id="checkoutlist">
-                <div class="checkout">
-                    <img src="img/cam/vcam_1.jpg" alt="Description image">
-                    <p>Nom du produit<a href="#">(Voir)</a></p>
-                    <p>Description du produit</p>
-                    <p>Prix</p>
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-            <div id="totalprice">
-                <h3>Prix total :</h3>
-                <p class="price"></p>
-            </div>-->
+        <section>
             <p id=total></p>
             <p id="remove">Vider le panier</p>
         </section>
@@ -59,21 +46,20 @@
                     </label>
                 </div>
                 <div class="formitems2">
-                    <label for="adress">Adresse postale*
+                    <label for="address">Adresse postale*
                         <input id="address" type="text" required>
                     </label>
                     <label for="city">Ville*
                         <input id="city" type="text" pattern="[a-zA-Z]" title="Renseigner un nom de ville valide (ex: Moulins, Lyon...)" required>
                     </label>
                     <label for="email">Adresse Email*
-                        <input id="email" type="text" pattern ="[^ @]*@[^ @]*" title="Renseigner une adresse e-mail valide 'exemple@live.com'" required>
+                        <input id="email" type="text" pattern="[^ @]*@[^ @]*" title="Renseigner une adresse e-mail valide 'exemple@live.com'" required>
                     </label>
                 </div>
                 <button id="submit">Commander</button>	
             </form> 		 
         </div>
     </main>
-
     <footer>
         <ul>
             <li>Orinoco</li>

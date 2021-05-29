@@ -181,7 +181,7 @@ header {
 
 #succes-container {
   width: 100%;
-  height: 80%;
+  height: 70%;
   position: absolute; }
 
 #succes {
@@ -273,12 +273,17 @@ main {
     border-radius: 0.2rem; }
 
 footer {
-  width: 100%;
   height: 140px;
+  width: 100%;
   background-color: #272727; }
-  footer ul li {
-    list-style: none;
-    text-decoration: none;
-    color: white; }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    line-height: 140px;
+    padding: 0; }
+    footer ul li {
+      list-style: none;
+      text-decoration: none;
+      color: white; }
 
 /*# sourceMappingURL=article.css.map */

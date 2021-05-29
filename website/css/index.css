@@ -90,7 +90,8 @@
         text-justify: distribute;
         margin: 0.5rem auto !important; }
     main section {
-      width: 90% !important; }
+      width: 90% !important;
+      margin: 0 auto; }
       main section #checkoutlist .checkout :nth-child(2) {
         overflow: hidden;
         font-size: 12px; }
@@ -115,7 +116,8 @@
       margin: 0.5rem auto !important; }
 
   section {
-    max-width: 60% !important; }
+    max-width: 60% !important;
+    margin: 0 auto; }
     section #checkoutlist .checkout :nth-child(2) {
       overflow: hidden;
       font-size: 18px; }
@@ -281,19 +283,14 @@ footer {
   height: 140px;
   width: 100%;
   background-color: #272727; }
-  footer ul li {
-    list-style: none;
-    text-decoration: none;
-    color: white; }
-
-.promo {
-  top: 10px;
-  position: absolute;
-  right: 10px;
-  padding: 1rem;
-  background: #ff671fc7;
-  font-weight: 800;
-  border-radius: 2rem;
-  color: white; }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    line-height: 140px;
+    padding: 0; }
+    footer ul li {
+      list-style: none;
+      text-decoration: none;
+      color: white; }
 
 /*# sourceMappingURL=index.css.map */
