@@ -1,5 +1,5 @@
 # ---- DESCRIPTION ----
-Création d'un site e-commerce fictif de vente d'appareil photo Vintage
+Création d'un site e-commerce fictif de vente d'appareil photo Vintage <br/>
 Projet numéro 5 - Orinoco - Openclassrooms
 
 # ---- INSTALLATION DU PROJET ----
