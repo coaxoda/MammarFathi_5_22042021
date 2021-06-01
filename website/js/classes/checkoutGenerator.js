@@ -118,7 +118,7 @@ class myCheckout{
                 email : email.value
             }
             
-            if(firstName.value && lastName.value && address.value && city.value && email.value != "" && /^[a-z0-9._%+-]+@[a-z0-9.-]/.test(email)){ 
+            if(firstName.value && lastName.value && address.value && city.value && email.value != "" && /[a-z0-9._%+-]+@[a-z0-9.-]/.test(email.value)){ 
                 products.push(myCart.id)
                 contact = userInfo
                 let order = JSON.stringify({contact, products})
