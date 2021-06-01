@@ -24,10 +24,12 @@ class CheckoutGenerator {
             document.querySelector('#remove').style.display = 'none'
             document.querySelector('#submit').style.display = 'none'
             document.querySelector('#placeorder').innerHTML = " "
+            document.querySelector('.form').style.display = 'none'
         }
         //Iterate all product inside myCart by the propertie length
         if(myCart != null){
             for (let i = 0; i < myCart.length || myCart.price; i++) {
+            document.querySelector('.form-empty').style.display = "none"
             new myCheckout(checkoutContainer, myCart[i])
             } 
         }
@@ -101,7 +103,7 @@ class myCheckout{
         let city = document.getElementById('city')
         let email = document.getElementById('email')
 
-        btn.addEventListener('click', function(){
+        btn.addEventListener('click', function(event){
             let contact = JSON.parse(localStorage.getItem("contact"))
             let products  = JSON.parse(localStorage.getItem("products"))
 
@@ -124,6 +126,7 @@ class myCheckout{
                 let order = JSON.stringify({contact, products})
                 localStorage.setItem("OrderID", order)
                 window.location.href = "confirm.html"
+                event.preventDefault()
             }else {
                 console.log("Incorrect value into input !");            
             }

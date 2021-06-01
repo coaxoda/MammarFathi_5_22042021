@@ -214,6 +214,97 @@ main{
         }
     }
 }
+//IF CART IS EMPTY, FORMS IS DISABLED
+.form-empty{
+    display: flex;
+    opacity: 0.3;
+    margin: 0 auto;
+    position: relative;
+    filter: blur(1px);
+    #empty{
+       position: absolute; 
+       background-color: #2b2b2b00;
+       width:100%;
+       height: 120%;
+       z-index: 10;
+    }
+    .formsection{
+        margin: 0 auto;
+        width: 50%;
+        padding: 1rem;
+    }
+    .formitems1{
+        display: flex;
+        align-items: center;
+        width: 102.5%;
+        label{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        input{
+            padding: 1rem;
+            width: 95%;
+            margin: 0.5rem auto;
+            border: none;
+            background-color: gray;
+        }
+        ::placeholder{
+            color: white;
+        }
+    }
+    .formitems2{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content:center;
+        label{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+        }
+        input{
+            padding: 1rem;
+            width: 100%;
+            margin: 0.5rem auto;
+            border: none;
+            background-color: gray;
+        }
+        &:focus{
+            color: white;
+        }
+    }
+    #submit{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        background: #e29746;
+        background: linear-gradient(90deg, #e29746 0%, #b186f7 100%);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+        width: 150px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        margin: 3rem auto;
+        border-radius: 4rem;
+        color: white;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        outline: none;
+        &:hover{
+            transform:scale(1.02);
+            box-shadow: 0px 0px 20px rgba(244, 164, 255, 0.274);
+        }
+
+        &:active{
+            transform:scaleZ(0.95);
+            box-shadow: 0px 0px 20px rgba(255, 136, 0, 0.219);
+        }
+    }
+}
 
 #checkoutlist{
     height: 100%;
@@ -270,7 +361,7 @@ main{
 }
 
 main{
-    color: white
+    color: white;
 }
 
 // FOOTER SECTION SETTINGS //

@@ -59,6 +59,32 @@
                 <button id="submit">Commander</button>	
             </form> 		 
         </div>
+        <div class="form-empty">
+            <div id="empty"></div>
+            <form class="formsection">
+                <div class="formitems1">
+                    <label for="firstName">Nom*
+                        <input id="firstName" type="text" placeholder="Nom requis" required>
+                    </label>
+                    <p>  </p>
+                    <label for="lastName">Prénom*
+                        <input id="lastName" type="text" placeholder="Prénom requis" required>
+                    </label>
+                </div>
+                <div class="formitems2">
+                    <label for="address">Adresse postale*
+                        <input id="address" type="text" required>
+                    </label>
+                    <label for="city">Ville*
+                        <input id="city" type="text" title="Renseigner un nom de ville valide (ex: Moulins, Lyon...)" required>
+                    </label>
+                    <label for="email">Adresse Email*
+                        <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]" title="Renseigner une adresse e-mail valide 'exemple@live.com'" required>
+                    </label>
+                </div>
+                <button id="submit">Commander</button>	
+            </form> 		 
+        </div>
     </main>
     <footer>
         <ul>
