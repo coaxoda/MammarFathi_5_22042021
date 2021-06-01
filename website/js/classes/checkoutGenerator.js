@@ -1,6 +1,14 @@
+function getCheckout() {
+    try{
+        let myCart = JSON.parse(localStorage.getItem("myCart"))
+        CheckoutGenerator._generateCheckoutItems(myCart)
+    }catch(e){
+        console.log(e);
+    }
+}
 class CheckoutGenerator {
 
-    static _generateCheckoutItems(cameras, myCart) {
+    static _generateCheckoutItems(myCart) {
         let checkoutContainer = document.createElement('div');
         let mainSection = document.querySelector('section')
         checkoutContainer.id = 'checkoutlist'
@@ -14,18 +22,20 @@ class CheckoutGenerator {
             checkoutContainer.appendChild(empty)
             //Order option undisplay if cart is empty
             document.querySelector('#remove').style.display = 'none'
-            let submitOrder = document.querySelector('#submit').style.display = 'none'
+            document.querySelector('#submit').style.display = 'none'
             document.querySelector('#placeorder').innerHTML = " "
         }
         //Iterate all product inside myCart by the propertie length
-        for (let i = 0; i < myCart.length || myCart.price; i++) {
-            new myCheckout(cameras, checkoutContainer, myCart[i])
-        } 
+        if(myCart != null){
+            for (let i = 0; i < myCart.length || myCart.price; i++) {
+            new myCheckout(checkoutContainer, myCart[i])
+            } 
+        }
     }
 }
 class myCheckout{
 
-    constructor(cameras, checkoutContainer, myCart){
+    constructor(checkoutContainer, myCart){
         let checkout = this._checkoutContent(checkoutContainer)
         this._checkoutImg(myCart, checkout)
         this._checkoutName(checkout, myCart)
@@ -92,7 +102,7 @@ class myCheckout{
         let email = document.getElementById('email')
 
         btn.addEventListener('click', function(){
-            let contact = JSON.parse(localStorage.getItem("contact "))
+            let contact = JSON.parse(localStorage.getItem("contact"))
             let products  = JSON.parse(localStorage.getItem("products"))
 
             if(contact === null){
@@ -108,7 +118,7 @@ class myCheckout{
                 email : email.value
             }
             
-            if(firstName.value && lastName.value && address.value && city.value && email.value != ""){ 
+            if(firstName.value && lastName.value && address.value && city.value && email.value != "" && /^[a-z0-9._%+-]+@[a-z0-9.-]/.test(email)){ 
                 products.push(myCart.id)
                 contact = userInfo
                 let order = JSON.stringify({contact, products})
@@ -120,7 +130,7 @@ class myCheckout{
         })
     }
 }
-
+getCheckout()
 // console.log(userInfo);
 // console.log(products);
 // products.push(myCart.id)
