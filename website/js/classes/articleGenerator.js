@@ -1,17 +1,14 @@
 class articleGenerator {
 
-    static _generateArticle(cameras, cameraId) {
+    static _generateArticle(cameras) {
         // Creating of the main section/ base of implementation for "articleItem.js"
         let articleSection = document.createElement('section');
         let mainContent = document.querySelector('main');
         mainContent.appendChild(articleSection);
         //Get product ID by location to the next page + finding all ID corresponding to the product selected previously
 
-        console.log(cameraId);
-        // const cameraId = cameras.find(cameras => cameras['_id'] == cameraId);
-
         //New instance of the class article "articleItem.js" with params -- (cameras, articleSection, cameraId) -- previously created in "/article.js" and here
-        new article(cameras, articleSection, cameraId)
+        new article(cameras, articleSection)
     }
 }
 class article {
