@@ -24,7 +24,6 @@ class article {
         this._articleTitle(articleBody, cameras)
         this._articlePrice(cameras, articleBody)
         this._articleBtn(articleSection, cameras)
-        this.cameraId = cameraId
         this.cameras = cameras
         this._articleLens(articleBody, cameras)
     }
